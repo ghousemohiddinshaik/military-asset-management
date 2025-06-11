@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignments - Military Asset Management</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Military Asset Management System</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="purchases.html">Purchases</a>
+      <a href="transfers.html">Transfers</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="expenditures.html">Expenditures</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Assign Asset to Personnel</h2>
+    <form id="assignmentForm">
+      <label>Asset Type:
+        <select id="assignmentAssetType" required>
+          <option value="">Select</option>
+          <option value="Vehicle">Vehicle</option>
+          <option value="Weapon">Weapon</option>
+          <option value="Ammunition">Ammunition</option>
+        </select>
+      </label>
+      <label>Quantity:
+        <input type="number" id="assignmentQuantity" min="1" required />
+      </label>
+      <label>Personnel Name:
+        <input type="text" id="personnelName" required />
+      </label>
+      <label>Personnel ID:
+        <input type="text" id="personnelID" required />
+      </label>
+      <label>Assignment Date:
+        <input type="date" id="assignmentDate" required />
+      </label>
+      <button type="submit">Assign Asset</button>
+    </form>
+
+    <section>
+      <h2>Assignment History</h2>
+      <table id="assignmentHistory" border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Asset Type</th>
+            <th>Quantity</th>
+            <th>Personnel Name</th>
+            <th>Personnel ID</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Assignment records -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

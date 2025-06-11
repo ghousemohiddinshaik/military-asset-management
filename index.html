@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Military Asset Management - Dashboard</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Military Asset Management System</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="purchases.html">Purchases</a>
+      <a href="transfers.html">Transfers</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="expenditures.html">Expenditures</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Dashboard</h2>
+      <div class="filters">
+        <label>Date Range: <input type="date" id="startDate" /> to <input type="date" id="endDate" /></label>
+        <label>Base:
+          <select id="baseFilter">
+            <option value="all">All Bases</option>
+            <option value="base1">Base 1</option>
+            <option value="base2">Base 2</option>
+          </select>
+        </label>
+        <label>Equipment Type:
+          <select id="equipmentFilter">
+            <option value="all">All Types</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="weapons">Weapons</option>
+            <option value="ammunition">Ammunition</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <h3>Opening Balance</h3>
+          <p id="openingBalance">0</p>
+        </div>
+        <div class="metric">
+          <h3>Closing Balance</h3>
+          <p id="closingBalance">0</p>
+        </div>
+        <div class="metric clickable" id="netMovementMetric">
+          <h3>Net Movement</h3>
+          <p id="netMovement">0</p>
+        </div>
+        <div class="metric">
+          <h3>Assigned Assets</h3>
+          <p id="assignedAssets">0</p>
+        </div>
+        <div class="metric">
+          <h3>Expended Assets</h3>
+          <p id="expendedAssets">0</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pop-up modal for Net Movement details -->
+    <div id="netMovementModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <h2>Net Movement Details</h2>
+        <div id="netMovementDetails">
+          <h3>Purchases</h3>
+          <ul id="purchaseList"></ul>
+          <h3>Transfers In</h3>
+          <ul id="transferInList"></ul>
+          <h3>Transfers Out</h3>
+          <ul id="transferOutList"></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

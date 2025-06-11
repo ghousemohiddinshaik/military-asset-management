@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Purchases - Military Asset Management</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Military Asset Management System</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="purchases.html">Purchases</a>
+      <a href="transfers.html">Transfers</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="expenditures.html">Expenditures</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Record a Purchase</h2>
+    <form id="purchaseForm">
+      <label>Asset Type:
+        <select id="assetType" required>
+          <option value="">Select</option>
+          <option value="Vehicle">Vehicle</option>
+          <option value="Weapon">Weapon</option>
+          <option value="Ammunition">Ammunition</option>
+        </select>
+      </label>
+      <label>Model/Name:
+        <input type="text" id="modelName" required />
+      </label>
+      <label>Quantity:
+        <input type="number" id="quantity" min="1" required />
+      </label>
+      <label>Unit Cost:
+        <input type="number" id="unitCost" min="0" step="0.01" />
+      </label>
+      <label>Purchase Date:
+        <input type="date" id="purchaseDate" required />
+      </label>
+      <label>Supplier Info:
+        <input type="text" id="supplierInfo" />
+      </label>
+      <label>Receiving Base:
+        <select id="receivingBase" required>
+          <option value="">Select Base</option>
+          <option value="Base 1">Base 1</option>
+          <option value="Base 2">Base 2</option>
+        </select>
+      </label>
+      <button type="submit">Record Purchase</button>
+    </form>
+
+    <section>
+      <h2>Purchase History</h2>
+      <table id="purchaseHistory" border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Asset Type</th>
+            <th>Model</th>
+            <th>Quantity</th>
+            <th>Unit Cost</th>
+            <th>Total Cost</th>
+            <th>Purchase Date</th>
+            <th>Supplier</th>
+            <th>Base</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Purchase records will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

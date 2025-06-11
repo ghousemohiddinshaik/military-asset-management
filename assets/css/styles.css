@@ -1,0 +1,174 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #2c3e50;
+    padding: 1em 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  header h1 {
+    margin-bottom: 0.3em;
+  }
+  
+  nav a {
+    color: #ecf0f1;
+    margin-left: 1.2em;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #18bc9c;
+  }
+  
+  main {
+    padding: 2em;
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(0 0 0 / 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 1em;
+    color: #2c3e50;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.8em;
+  }
+  
+  form label input,
+  form label select,
+  form label textarea {
+    display: block;
+    margin-top: 0.3em;
+    padding: 0.5em;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: #18bc9c;
+    color: white;
+    padding: 0.7em 1.2em;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+  }
+  
+  form button:hover {
+    background-color: #15a589;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    font-size: 0.9em;
+  }
+  
+  table thead {
+    background-color: #18bc9c;
+    color: white;
+  }
+  
+  table th,
+  table td {
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .filters label {
+    margin-right: 1.5em;
+    font-weight: 600;
+  }
+  
+  .metrics {
+    display: flex;
+    gap: 2em;
+    margin-top: 1.5em;
+    flex-wrap: wrap;
+  }
+  
+  .metric {
+    background-color: #18bc9c;
+    color: white;
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    width: 160px;
+    text-align: center;
+    cursor: default;
+    transition: background-color 0.3s;
+  }
+  
+  .metric.clickable:hover {
+    background-color: #15a589;
+    cursor: pointer;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 8% auto;
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 1em;
+    top: 0.2em;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
+  

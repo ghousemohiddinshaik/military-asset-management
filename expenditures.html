@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expenditures - Military Asset Management</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Military Asset Management System</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="purchases.html">Purchases</a>
+      <a href="transfers.html">Transfers</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="expenditures.html">Expenditures</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Record Asset Expenditure</h2>
+    <form id="expenditureForm">
+      <label>Asset Type:
+        <select id="expenditureAssetType" required>
+          <option value="">Select</option>
+          <option value="Vehicle">Vehicle</option>
+          <option value="Weapon">Weapon</option>
+          <option value="Ammunition">Ammunition</option>
+        </select>
+      </label>
+      <label>Quantity:
+        <input type="number" id="expenditureQuantity" min="1" required />
+      </label>
+      <label>Expenditure Reason:
+        <textarea id="expenditureReason" required></textarea>
+      </label>
+      <label>Expenditure Date:
+        <input type="date" id="expenditureDate" required />
+      </label>
+      <button type="submit">Record Expenditure</button>
+    </form>
+
+    <section>
+      <h2>Expenditure History</h2>
+      <table id="expenditureHistory" border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Asset Type</th>
+            <th>Quantity</th>
+            <th>Reason</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Expenditure records -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

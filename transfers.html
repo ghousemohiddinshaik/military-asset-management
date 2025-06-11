@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transfers - Military Asset Management</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Military Asset Management System</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="purchases.html">Purchases</a>
+      <a href="transfers.html">Transfers</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="expenditures.html">Expenditures</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Asset Transfer</h2>
+    <form id="transferForm">
+      <label>Asset Type:
+        <select id="transferAssetType" required>
+          <option value="">Select</option>
+          <option value="Vehicle">Vehicle</option>
+          <option value="Weapon">Weapon</option>
+          <option value="Ammunition">Ammunition</option>
+        </select>
+      </label>
+      <label>Quantity:
+        <input type="number" id="transferQuantity" min="1" required />
+      </label>
+      <label>Source Base:
+        <select id="sourceBase" required>
+          <option value="">Select Base</option>
+          <option value="Base 1">Base 1</option>
+          <option value="Base 2">Base 2</option>
+        </select>
+      </label>
+      <label>Destination Base:
+        <select id="destinationBase" required>
+          <option value="">Select Base</option>
+          <option value="Base 1">Base 1</option>
+          <option value="Base 2">Base 2</option>
+        </select>
+      </label>
+      <label>Transfer Date:
+        <input type="date" id="transferDate" required />
+      </label>
+      <label>Reason for Transfer:
+        <textarea id="transferReason"></textarea>
+      </label>
+      <button type="submit">Initiate Transfer</button>
+    </form>
+
+    <section>
+      <h2>Transfer History</h2>
+      <table id="transferHistory" border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Asset Type</th>
+            <th>Quantity</th>
+            <th>Source Base</th>
+            <th>Destination Base</th>
+            <th>Date</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transfer records here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
